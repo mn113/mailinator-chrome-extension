@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "fakemail",
+	"description": "Make a disposable email address and visit its inbox.",
+	"version": "0.1",
+	"browser_action": {
+		"default_icon": "logo48.png",
+		"default_popup": "popup.html",
+		"default_title": "New Mailinator address"
+	},
+	"icons": { "48": "logo48.png",
+	          "128": "logo128.png" },
+	"permissions": ["clipboardWrite", "activeTab"],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["content.js"]
+	}]
+}

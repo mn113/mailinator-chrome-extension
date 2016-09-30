@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fake Email Generator</title>
+		<style type="text/css">
+			body {
+				min-width: 250px;
+				padding: 5px 0;
+			}
+			h1 {
+				font-size: 1.2em;
+			}
+			label {
+				float: left;
+				font-weight: bold;
+			}
+			select {
+				display: inline-block;
+				clear: both;
+			}
+			form > div {
+				margin: 0.5em 0;
+			}
+			input {
+				width: 35%;
+			}
+			button, img {
+				float: right;
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Fake Email Generator</h1>
+		<form name="emailgen">
+			<label>Service:</label>
+			<select name="service">
+				<option value="1">Mailinator</option>
+				<option value="2">GuerillaMail</option>
+				<option value="3">10MinuteMail</option>				
+			</select>
+			<div>
+				<input type="text" name="firstpart" id="firstpart">&nbsp;@
+				<input type="text" name="domain" id="domain">
+				<img src="refresh.png" id="regenerate" alt="Regenerate">
+			</div>
+			<button type="button" id="accept">Accept &amp; Use</button>
+		</form>
+		<script src="background.js"></script>
+	</body>	
+</html>
